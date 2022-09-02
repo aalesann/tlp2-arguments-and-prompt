@@ -32,7 +32,7 @@ console.clear();
 // readline.question('Ingrese la base: ', base => { // Callback N°1
 //     readline.question('Ingrese el limite: ', limite => { // Callback N°2
 //         try {
-//             // validarBase(base);
+//             validarBase(base);
 //             validarLimite(limite);
 //             mostrarEncabezado(base);
 //             multiplicar(base, limite);
@@ -67,25 +67,25 @@ console.clear();
 
 // ========================= Alternativa 3 ==========================
 // Función autoinvocada que ejecuta una función asíncrona en su interior
-(
-    async () => {
-        try {
-            const base = await leerDatosPorConsola('Ingrese la base: ');
-            validarBase(base);
+// (
+//     async () => {
+//         try {
+//             const base = await leerDatosPorConsola('Ingrese la base: ');
+//             validarBase(base);
 
-            const limite = await leerDatosPorConsola('Ingrese el limite: ');
-            validarLimite(limite);
+//             const limite = await leerDatosPorConsola('Ingrese el limite: ');
+//             validarLimite(limite);
             
-            mostrarEncabezado(base);
-            multiplicar(base, limite);
+//             mostrarEncabezado(base);
+//             multiplicar(base, limite);
             
-            readline.close();
-        } catch (error) {
-            console.log(error.message);
-            return readline.close();
-        }
-    }
-)(); 
+//             readline.close();
+//         } catch (error) {
+//             console.log(error.message);
+//             return readline.close();
+//         }
+//     }
+// )(); 
 // ==============================================================
 
 
